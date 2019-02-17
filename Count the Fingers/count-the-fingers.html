@@ -1,0 +1,60 @@
+<html>
+    <head>
+
+        <title>JavaScript</title>
+
+        <style type="text/css">
+        
+        .circle {
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            float:left;
+            margin:50px;
+        }
+
+        #red-circle {
+            background-color:red;
+        }
+
+        #blue-circle {
+            background-color:blue;
+        }
+
+        #yellow-circle {
+            background-color:yellow;
+        }
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <p>How many fingers am I holding up?</p>
+
+        <p><input type="text" id="guess"> <button id="guessButton">Guess!</button></p>
+
+        <script type="text/javascript">
+
+        document.getElementById("guessButton").onclick = function() {
+
+            let randomNumber = Math.floor(Math.random()*6);
+            
+            if (document.getElementById("guess").value == randomNumber) {
+            
+            alert("You got it!")
+        
+            } else {
+            
+                alert(`Nope, the number was ${randomNumber}.`)
+        
+            }
+
+        }
+        
+        </script>
+
+    </body> 
+
+</html>
